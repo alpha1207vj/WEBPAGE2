@@ -1,0 +1,474 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+
+}
+nav
+{
+    background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    padding: 0 2rem 0 1.4rem;
+}
+.nav_section
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+.nav_logo{
+  margin-right: -5%;
+
+}
+.nav_logo a div
+{
+  background-color: black;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  position: relative;
+}
+.nav_logo a div::before
+{
+    content: '';
+    position: absolute;
+    background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    border: 2.3px solid black;
+    z-index: 2;
+    width: 30px;
+    height: inherit;
+    top: -10px;
+    left: -10px;
+    border-radius: inherit;
+}
+.nav_logo a
+{
+    text-decoration: none;
+    font-family: Zain;
+    font-size: 3.4em;
+    font-weight: bold;
+    color: black;
+}
+
+.nav_elements
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3em;
+    list-style: none;
+    
+}
+.nav_links
+{
+  white-space: nowrap;
+  margin:  0 0.5em 0 0.5em;
+  position: relative;
+}
+.nav_links a
+{
+    text-decoration:  none;
+    color: white;
+    font-family: Zain;
+    font-size: 1.2em;
+    transition: all 0.4s ease;
+}
+.nav_links a:hover
+{
+    color: #13547a;
+}
+.hover_items
+{
+    position: absolute;
+    top: 100px;
+    left: -2em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    clip-path: polygon(0 100%, 100% 100%, 100% 19%, 32% 19%, 22% 0, 13% 19%, 0 19%);
+    padding: 22px 15px 10px 15px;
+    border-radius: 10px;
+    transition: all 0.8s ease;
+    opacity: 0;
+    background-color: white;
+    z-index: 3;
+    
+}
+.hover_items span a
+{
+    color: gray;
+    font-family: Zain;
+    font-size: 1.3em;
+}
+.nav_elements .nav_links:last-of-type
+{
+  
+    padding: 28px 0 32px 0 ;
+}
+.nav_elements .nav_links:last-of-type a .fa-angle-down
+{
+   position: absolute;
+   top: 30px;
+   margin-left: 2px;
+}
+.nav_elements .nav_links:last-of-type:hover div
+{
+  transform: translateY(-16px);
+  opacity: 1;
+  
+}
+.icon
+{
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: white ;
+    position: relative;
+    transition: all 0.4s ease;
+    right: 2%
+
+}
+.fa-circle-user
+{
+    transform: scale(2.4);
+    margin-left: -4%;
+    color: #13547a;
+    position: absolute;
+    top: 17.5px;
+    left: 19px;
+    transition: all 0.4s ease;
+}
+.icon:hover
+{
+    background-color: #13547a;
+}
+.icon:hover .fa-circle-user
+{
+    color: white;
+}
+.herosection
+{
+
+     min-height: 100vh;
+     margin-top: 0.4px;
+     position: relative;
+    
+}
+.herosectionpart1
+{
+    height: 70vh;
+    background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+   z-index: 0;
+}
+.herosectionpart2
+{
+    height: 70vh;
+    background-color: #80d0c7;
+    z-index: 0;
+    
+}
+.gridblock
+{
+ z-index: 100000;
+  height: 119vh;
+  width: 70%;
+  position: absolute;
+  top: 80px;
+  left: 15%;
+  display: grid;
+  grid-template-rows: repeat(5,1fr);
+  grid-template-columns: repeat(5,1fr);
+  gap: 20px;
+  grid-template-areas: 
+  "item1     item1     item1    item1     item1"
+  "item2     item2     item2     item2     item2"
+  "item3     item3     item4     item4     item4"
+  "item3     item3     item4     item4     item4"
+  "item3     item3    item4     item4     item4"
+  
+}
+.item1
+{
+    grid-area: item1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+.item1 h1 {
+    font-family: Zain;
+    font-size: 5em;
+    font-weight: bold;
+    position: absolute;
+    top: -91px;
+    color: white;
+}
+.item1 h3
+{
+    font-family: Zain;
+    font-size: 1.9em;
+    font-family: Zain;
+    position: absolute;
+    top: 30px;
+    color : #13547a;
+}
+.item2
+{
+    
+    grid-area: item2;
+    margin-top: -20px;
+    height: 100px;
+    position: relative;
+}
+.item2 input
+{
+    height: 70px;
+    width: 80%;
+    border-radius: 30px;
+    position: absolute;
+    top: px;
+    left: 10%;
+    border: none;
+    padding-left: 70px;
+    outline: none;
+}
+.item2 i
+{
+    position: absolute;
+    left: 13%;
+    top: 27px;
+    z-index: 1;
+    transform: scale(1.5);
+}
+.item2 .searchbutton
+{
+    border-radius: 20px;
+    width: 150px;
+    height: 50px;
+    z-index: 222;
+    position: absolute;
+    right: 12%;
+    top: 10px;
+    background-color: #80d0c7;
+    color: white;
+    font-family: Zain;
+    font-size: 1.7em;
+    border: none;
+    transition: all 0.5s ease;
+}
+.item2 .searchbutton:hover
+{
+    background-color: #13547a;
+}
+::placeholder{
+    font-family: Zain;
+    font-size: 1.4em;
+}
+.item3
+{
+    background-color: white;
+    grid-area: item3;
+    border-radius: 20px ;
+    margin-top: -40px;
+    display: grid;
+    grid-template-rows : 10% 40% 50%;
+    grid-template-columns : repeat(3, 1fr);
+    grid-template-areas: 
+    "card-text1  card-text1  card-text1"
+    "card-text2  card-text2  card-text2"
+    "card-image1  card-image1  card-image1"
+}
+.item3 .card-text1
+{
+    grid-area: card-text1;
+    font-size: 2.3em;
+    font-family: Zain;
+    margin-left: 4%;
+    margin-top: 20px;
+    font-weight: bold;
+
+}
+.item3 .card-text2 {
+    grid-area: card-text2;
+    font-family: Zain;
+    font-size: 1.7em;
+    padding-top: 18px;
+    margin-left: 5%;
+    color: gray;
+}
+.item3 .card-image1 img
+{
+  object-fit: cover;
+  object-position: center cemter;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+.item3 .card-image1
+{
+    grid-area: card-image1;
+}
+.item4
+{
+    grid-area: item4;
+    border-radius: 20px;
+    margin-top: -40px;
+    position: relative;
+    z-index: 2;
+   
+}
+
+.item4 img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 3;
+    border-radius: 20px;
+    
+    
+}
+
+.item4::before
+{
+    position: absolute;
+    content: '';
+    background:linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    border-radius: 20px;
+   
+}
+
+.item4 .item4_container
+{
+   
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 15% 35% 20% 30%;
+    grid-template-columns: repeat(3,1fr);
+    position: absolute;
+    z-index: 1111111;
+    top: 0px;
+    grid-template-areas:
+    "card2-text1  card2-text1  card2-text1" 
+    "card2-text2  card2-text2  card2-text2" 
+    "card2-button  card2-button  card2-button" 
+    "card2-icons  card2-icons  card2-icons" 
+
+
+}
+.card2-icons
+{
+    grid-area: card2-icons;
+}
+.card2-text1 
+{  
+
+    grid-area: card2-text1;
+    font-family: Zain;
+    font-size: 2.4em;
+    font-weight: bold;
+    padding-left: 5%;
+    padding-top: 14px;
+    color: white;
+
+}
+.card2-text2 
+{
+    
+    grid-area: card2-text2;
+    font-family: Zain;
+    font-size: 1.7em;
+    padding-left: 5%;
+    color: white;
+}
+.card2-button
+{
+   
+    grid-area: card2-button;
+    padding-left: 5%;
+}
+.card2-button button
+{
+    border-radius: 20px;
+    background-color: #80d0c7;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: Zain;
+    font-size: 1.5em;
+    width: 150px;
+    height: 40px;
+    
+}
+.card2-icons
+{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    ".   .   .   .   ." 
+    ".   .   .   .   ." 
+    ".   .   .   .   ." 
+    "text   facebook   twitter   pinterest   bookmark" 
+}
+.fa-square-facebook
+{
+    grid-area: facebook;
+    align-self: center;
+   align-self: center;
+   justify-self: start;
+   transform: scale(2);
+   color: #80d0c7;
+}
+.fa-square-pinterest
+{
+    grid-area: pinterest;
+    align-self: center;
+    justify-self: start;
+   transform: scale(2);
+   color: #80d0c7;
+   margin-left: -6em;
+}
+.fa-bookmark
+{
+    grid-area: bookmark;
+    align-self: center;
+    justify-self: end;
+    transform: scale(1.7);
+    margin-right: 35%;
+    color: white;
+
+}
+.fa-square-x-twitter
+{
+    grid-area: twitter ;
+    align-self: center;
+    justify-self: start;
+   transform: scale(2);
+   color: #80d0c7;
+   margin-left: -3em;
+}
+.card2-icons p 
+{
+    grid-area: text;
+    font-family: Zain;
+    font-size: 1.5em;
+    justify-self:center;
+}
